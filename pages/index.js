@@ -17,7 +17,7 @@ const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText, linkName, i
 )
 export default function Home() {
   return (
-    <div>
+    <Box>
       <h1>Hello World</h1>
       <Banner 
         purpose="RENT A HOME" 
@@ -30,6 +30,10 @@ export default function Home() {
         imageUrl='https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4'
       />
 
+      <Flex flexWrap="wrap">
+
+      </Flex>
+
       <Banner 
         purpose="BUY A HOME" 
         title1="Find, Buy & Own Your"
@@ -39,9 +43,13 @@ export default function Home() {
         buttonText="Explore Buying"
         linkName="/search?purpose=for-sale"
         imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008"
-      />  
+      /> 
+
+      <Flex flexWrap="wrap">
+
+      </Flex> 
       
-    </div>
+    </Box>
     
   )
 }
