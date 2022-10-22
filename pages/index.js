@@ -20,7 +20,6 @@ export const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText, link
 
 const Home = ({ propertiesForSale, propertiesForRent}) => (
     <Box>
-      <h1>Hello World</h1>
       <Banner 
         purpose="RENT A HOME" 
         title1="Rental Homes for"
