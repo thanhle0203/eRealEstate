@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Flex, Box, Text, Button } from '@chakra-ui/react';
-
+import Property from '../components/Property';
 import { baseUrl, fetchApi } from '../utils/fetchApi';
 
 const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText, linkName, imageUrl }) => (
@@ -17,8 +17,8 @@ const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText, linkName, i
     </Box>
   </Flex>
 )
-export default function Home({ propertyForSale, propertyForRent}) {
-  console.log(propertyForSale, propertyForRent);
+export default function Home({ propertiesForSale, propertiesForRent}) {
+  console.log(propertiesForSale, propertiesForRent);
 
   return (
     <Box>
@@ -35,7 +35,7 @@ export default function Home({ propertyForSale, propertyForRent}) {
       />
 
       <Flex flexWrap="wrap">
-        {propetiesForRent.map((property) => <Property property={property} key={property.id} />)}
+        {propertiesForRent?.map((property) => <Property property={property} key={property.id} />)}
       </Flex>
 
       <Banner 
@@ -50,7 +50,7 @@ export default function Home({ propertyForSale, propertyForRent}) {
       /> 
 
       <Flex flexWrap="wrap">
-        {propetiesForSale.map((property) => <Property property={property} key={property.id} />)}
+        {propertiesForSale?.map((property) => <Property property={property} key={property.id} />)}
       </Flex> 
       
     </Box>
