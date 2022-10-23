@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
         </Layout>
       </ChakraProvider>
     </>
-  )
+  );
 }
 
 export default MyApp
